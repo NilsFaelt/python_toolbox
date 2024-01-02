@@ -8,6 +8,6 @@ def nmap(ip):
     print("Nmap scan completed")
 
 if __name__ == "__main__":
-    target_ip = input("Enter the target IP address or range: ")
+    target_ip = input("enter the target IP address or range: ")
     nmap(target_ip)
 
