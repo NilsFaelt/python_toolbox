@@ -3,13 +3,19 @@ from nmap.nmap import nmap
 
 print("Welcome to ToolBox! \nPlease choose a option. \n1: nmap \n2: hydra\n3: burpsuite")
 
-userInput = input("use: ")
+user_input = input("use: ")
 
-if userInput == "1":
-    nmap()
-elif userInput == "2":
-    print("hydra")
-elif userInput == "3":
-    print("burpsuite")
-else: 
-    print("please enter a valid option")
+while True:
+  if user_input == "1":
+     ip_input = input("ip:")	
+     nmap(ip_input)
+     break
+  elif user_input == "2":
+     print("hydra")
+     break
+  elif user_input == "3":
+     print("burpsuite")
+     break
+  else: 
+     print("please enter a valid option")
+     user_input = input("use: ")	
