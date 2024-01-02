@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from nmap.nmap import nmap
 
-print("Welcome to ToolBox! \nPlease choose a option. \n1: nmap \n2: hydra\n3: burpsuite")
+print("Welcome To ToolBox! \nPlease choose a option. \n1: nmap \n2: hydra\n3: burpsuite")
 
 user_input = input("use: ")
 
