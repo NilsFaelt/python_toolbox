@@ -2,11 +2,10 @@
 
 import subprocess
 
-def nmap(ip): 
-    home_directory = os.path.expanduser("~")
-    scan_result_path = os.path.join(home_directory, "scan_result.txt")
-    command = f"nmap -oN {scan_result_path} {ip}"
-    os.system(command)
+def nmap(ip):
+    command = f"nmap -oN ../scan_results/scan_result {ip}"
+    subprocess.run(command, shell=True)
+    print("Nmap scan completed, scan saved to directory scan_results, inside python_toolbox directory ")
 
 if __name__ == "__main__":
     target_ip = input("enter the target IP address or range: ")
