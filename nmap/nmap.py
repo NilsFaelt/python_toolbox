@@ -3,9 +3,9 @@
 import subprocess
 
 def nmap(ip):
-    command = f"nmap -sV >> /root/shared/scan_result {ip}"
+    command = f"nmap -sV >> /root/scan_result {ip}"
     subprocess.run(command, shell=True)
-    print("Nmap scan completed, scan saved to directory scan_results, inside python_toolbox directory ")
+    print("Nmap scan completed, scan saved to root as scan_results")
 
 if __name__ == "__main__":
     target_ip = input("enter the target IP address or range: ")
