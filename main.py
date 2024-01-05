@@ -19,28 +19,33 @@ print(dogs)
 
 
 
-print("Welcome! \nPlease choose a option.\n1: Install packages \n2: nmap \n3: hydra\n4: burpsuite\n5: dirbuster")
+def display_menu():
+    print("Welcome!\nPlease choose an option.")
+    print("1: Install packages\n2: nmap\n3: hydra\n4: burpsuite\n5: dirbuster")
 
-user_input = input("use: ")
+def main():
+    while True:
+        display_menu()
+        user_input = input("Select an option: ")
 
-while True:
-  if user_input == "1":
-     update_packages()
-    
-  elif user_input == "2":
-     ip_input = input("ip:")	
-     nmap(ip_input)
-     break
-  elif user_input == "3":
-     print("hydra")
-     break
-  elif user_input == "4":
-     print("burpsuite")
-     break
-  elif user_input == "5":
-     ip_input = input("ip:")	
-     dirbuster(ip_input)
-     break
-  else: 
-     print("please enter a valid option")
-     user_input = input("use: ")	
+        if user_input == "1":
+            update_packages()
+        elif user_input == "2":
+            ip_input = input("Enter IP: ")
+            nmap(ip_input)
+        elif user_input == "3":
+            print("hydra")
+        elif user_input == "4":
+            print("burpsuite")
+        elif user_input == "5":
+            ip_input = input("Enter IP: ")
+            dirbuster(ip_input)
+        else:
+            print("Please enter a valid option.")
+
+        choice = input("Do you want to continue? (y/n): ").lower()
+        if choice != 'y':
+            break
+
+if __name__ == "__main__":
+    main()
