@@ -3,7 +3,7 @@
 import subprocess
 
 def nmap(ip):
-    command = f"nmap -sV -oN ../scan_results {ip}"
+    command = f"nmap -sV >> /root/shared/scan_result {ip}"
     subprocess.run(command, shell=True)
     print("Nmap scan completed, scan saved to directory scan_results, inside python_toolbox directory ")
 
