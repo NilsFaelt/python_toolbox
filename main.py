@@ -3,7 +3,7 @@ from nmap.nmap import nmap
 from dirbuster.dirbuster import dirbuster
 from update_packages.update_packages import update_packages
 dogs = r'''
-               Nils ToolBox
+               Gemina ToolBox
 
       / \__       / \__        / \__
      (    @\___  (    @\___   (    @\___
@@ -20,8 +20,11 @@ print(dogs)
 
 
 def display_menu():
-    print("Welcome!\nPlease choose an option.")
-    print("1: Install packages\n2: nmap\n3: hydra\n4: burpsuite\n5: dirbuster")
+    print("Welcome!\nPlease choose an option")
+    print("Choose option 1 first time you use this toolbox to install all tool/packages\n")
+    
+    print("1: Install packages/tools\n2: nmap\n3: hydra\n4: burpsuite\n5: dirbuster")
+    
 
 def main():
     while True:
