@@ -11,6 +11,4 @@ def wpscan(ip):
 
 if __name__ == "__main__":
     target_ip = input("enter the target IP address : ")
-    wpscan(target_ip)
-
-
+    wpscan(target_ip) 
