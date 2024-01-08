@@ -6,7 +6,7 @@ def wpscan(ip):
         print(config.path_saved_scan_result)
         command = f"wpscan --url https://{ip} --enumerate vp >> {config.path_saved_scan_result}scan_result_wpscan.txt"
         subprocess.run(command, shell=True)
-        print("WPScan scan completed. Results saved to scan_result_wpscan.txt on Desktop.")
+        print(f"WPScan scan completed. Results saved to scan_result_wpscan.txt in {config.dir_saved_scan_result}.")
     except Exception as e:
         print(f"An error occurred: {e}")
 
