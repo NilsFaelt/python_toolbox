@@ -4,6 +4,7 @@ from dirbuster.dirbuster import dirbuster
 from update_packages.update_packages import update_packages
 from packages_and_info.packages_and_info import packages_and_info
 from metasploit.metasploit import metasploit
+from wpscan.wpscan import wpscan
 
 
 dogs = r'''
@@ -27,7 +28,7 @@ def display_menu():
     print("Welcome!\nPlease choose an option")
     print("Choose option 1 first time you use this toolbox to install all tool/packages\n")
     
-    print("0: Info\n1: Install packages/tools\n2: nmap\n3: metasploit\n4: burpsuite\n5: dirbuster")
+    print("0: Info\n1: Install packages/tools\n2: nmap\n3: metasploit\n4: wpscan\n5: dirbuster")
     
 
 def main():
@@ -45,7 +46,7 @@ def main():
         elif user_input == "3":
             metasploit()
         elif user_input == "4":
-            print("burpsuite")
+            wpscan()
         elif user_input == "5":
             ip_input = input("Enter IP: ")
             dirbuster(ip_input)
