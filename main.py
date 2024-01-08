@@ -2,6 +2,10 @@
 from nmap.nmap import nmap
 from dirbuster.dirbuster import dirbuster
 from update_packages.update_packages import update_packages
+from packages_and_info.packages_and_info import packages_and_info
+from metasploit.metasploit import metasploit
+
+
 dogs = r'''
                Gemina ToolBox
 
@@ -23,7 +27,7 @@ def display_menu():
     print("Welcome!\nPlease choose an option")
     print("Choose option 1 first time you use this toolbox to install all tool/packages\n")
     
-    print("1: Install packages/tools\n2: nmap\n3: hydra\n4: burpsuite\n5: dirbuster")
+    print("0: Info\n1: Install packages/tools\n2: nmap\n3: metasploit\n4: burpsuite\n5: dirbuster")
     
 
 def main():
@@ -31,13 +35,15 @@ def main():
         display_menu()
         user_input = input("Select an option: ")
 
-        if user_input == "1":
+        if user_input == "0":
+            packages_and_info()
+        elif user_input == "1":
             update_packages()
         elif user_input == "2":
             ip_input = input("Enter IP: ")
             nmap(ip_input)
         elif user_input == "3":
-            print("hydra")
+            metasploit()
         elif user_input == "4":
             print("burpsuite")
         elif user_input == "5":

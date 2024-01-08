@@ -20,6 +20,7 @@ def update_packages():
         subprocess.run(["apt-get", "install", "dirb", "-y"])  
         subprocess.run(["apt-get", "install", "volatility", "-y"]) 
         
+        
         print("Packages updated successfully.")
     except Exception as e:
         print(f"An error occurred: {e}")
