@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from nmap.nmap import nmap
-from dirbuster.dirbuster import dirbuster
+from gobuster.gobuster import gobuster
 from update_packages.update_packages import update_packages
 from packages_and_info.packages_and_info import packages_and_info
 from metasploit.metasploit import metasploit
