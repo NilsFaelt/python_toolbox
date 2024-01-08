@@ -1,1 +1,1 @@
-path_saved_scan_result = "~/Desktop/"
+path_saved_scan_result = "~/home/"
