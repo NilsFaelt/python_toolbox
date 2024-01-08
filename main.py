@@ -46,7 +46,8 @@ def main():
         elif user_input == "3":
             metasploit()
         elif user_input == "4":
-            wpscan()
+            ip_input = input("Enter IP: ")
+            wpscan(ip_input)
         elif user_input == "5":
             ip_input = input("Enter IP: ")
             dirbuster(ip_input)
