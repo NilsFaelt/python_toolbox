@@ -1,11 +1,8 @@
 import subprocess
-import config
-import os
 
 def update_packages():
     try:
-        scan_results_dir = os.path.join(config.path_saved_scan_result, 'scan_results')
-        os.makedirs(scan_results_dir, exist_ok=True)
+    
         subprocess.run(["apt-get", "update"])
         subprocess.run(["apt-get", "upgrade", "-y"])
         subprocess.run(["apt-get", "install", "nmap", "-y"])
