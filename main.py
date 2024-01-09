@@ -50,7 +50,7 @@ def main():
             wpscan(ip_input)
         elif user_input == "5":
             ip_input = input("Enter IP: ")
-            dirbuster(ip_input)
+            gobuster(ip_input)
         else:
             print("Please enter a valid option.")
 
