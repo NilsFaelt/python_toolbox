@@ -1,10 +1,11 @@
 import config
 import subprocess
+from util_functions.create_scan_results_path_and_dir import create_scan_results_path_and_dir
 
 def wpscan(ip):
     try:
-        print(config.path_saved_scan_result)
-        command = f"wpscan --url https://{ip} --enumerate vp >> {config.path_saved_scan_result}/scan_result_wpscan.txt"
+       scan_result_path = create_scan_results_path_and_dir()
+        command = f"wpscan --url https://{ip} --enumerate vp >> {scan_result_path}/scan_result_wpscan.txt"
         subprocess.run(command, shell=True)
         print(f"WPScan scan completed. Results saved to scan_result_wpscan.txt in {config.dir_saved_scan_result}.")
     except Exception as e:
