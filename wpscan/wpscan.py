@@ -4,7 +4,7 @@ from util_functions.create_scan_results_path_and_dir import create_scan_results_
 
 def wpscan(ip):
     try:
-       scan_result_path = create_scan_results_path_and_dir()
+        scan_result_path = create_scan_results_path_and_dir()
         command = f"wpscan --url https://{ip} --enumerate vp >> {scan_result_path}/scan_result_wpscan.txt"
         subprocess.run(command, shell=True)
         print(f"WPScan scan completed. Results saved to scan_result_wpscan.txt in {config.dir_saved_scan_result}.")
