@@ -1,2 +1,2 @@
-path_saved_scan_result = "~/../home/"
-dir_saved_scan_result = "home"
+path_saved_scan_result = "~/usr/share/"
+dir_saved_scan_result = "/usr/share/"
