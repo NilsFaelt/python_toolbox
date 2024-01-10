@@ -6,7 +6,7 @@ import logging
 
 def nmap(ip):
     try:
-        scan_result_path = "create_scan_results_path_and_dir()"
+        scan_result_path = create_scan_results_path_and_dir()
 
         command = f"nmap -sV -p- >> {scan_result_path}scan_result_nmap.txt {ip}"
         subprocess.run(command, shell=True)
