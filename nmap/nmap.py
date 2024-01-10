@@ -1,7 +1,7 @@
 import os
 import config
 import subprocess
-import create_scan_results_path_and_dir from create_scan_results_path_and_dir
+from create_scan_results_path_and_dir import create_scan_results_path_and_dir
 import logging
 
 def nmap(ip):
