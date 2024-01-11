@@ -20,7 +20,7 @@ def update_packages():
         subprocess.run(["apt-get", "install", "gobuster", "-y"]) 
         subprocess.run(["apt-get", "install", "dirb", "-y"])  
         subprocess.run(["apt-get", "install", "volatility", "-y"]) 
-        
+        subprocess.run(["apt", "install", "curl", "-y"]) 
         
         print("Packages updated successfully.")
     except Exception as e:
