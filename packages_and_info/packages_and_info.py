@@ -16,6 +16,7 @@ def packages_and_info():
     print("13. Gobuster")
     print("14. Dirb")
     print("15. Volatility")
+    print("16. Curl scan for users")
 
     choice = input("Enter the number of the package: ")
 
@@ -49,6 +50,8 @@ def packages_and_info():
         print("Dirb: A web content scanner used for discovering hidden directories and files on web servers.")
     elif choice == "15":
         print("Volatility: An advanced memory forensics framework used for analyzing volatile memory dumps for malware analysis and incident response.")
+    elif choice == "16":
+        print("Enter a web address, and receive all emails found on that specific page in the response. Note: This tool is designed for scanning the content of the provided page only and is not a web scraper. If you wish to scan different sections of a website, you must manually input each location. ")
     else:
         print("Invalid choice. Please enter a valid number corresponding to the package.")
 
