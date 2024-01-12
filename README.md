@@ -39,6 +39,10 @@ To use this toolbox, follow these steps:
     cd python_toolbox
     python3 main.py
     ```
+5. Choose option 1 first tinme you use toolbox to install tools
+    ```bash
+    choose option 1 inside toolbox
+    ```
 
 ### This toolbox is only for legal purposes
   Dont use any of theese tools if you dont have authority to do so.
