@@ -39,7 +39,7 @@ To use this toolbox, follow these steps:
     cd python_toolbox
     python3 main.py
     ```
-5. Choose option 1 first tinme you use toolbox to install tools
+5. Choose option 1 first time you use toolbox to install tools
     ```bash
     choose option 1 inside toolbox
     ```
