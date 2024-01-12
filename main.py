@@ -6,8 +6,9 @@ from packages_and_info.packages_and_info import packages_and_info
 from metasploit.metasploit import metasploit
 from wpscan.wpscan import wpscan
 from util_functions.scan_curl_for_users import scan_curl_for_users
-
-
+from get_pokemon.get_pokemon import get_pokemon
+import asyncio 
+import json
 dogs = r'''
                Gemina ToolBox
 
@@ -29,7 +30,7 @@ def display_menu():
     print("Welcome!\nPlease choose an option")
     print("Choose option 1 first time you use this toolbox to install all tool/packages\n")
     
-    print("0: Info\n1: install packages/tools\n2: nmap\n3: metasploit\n4: wpscan\n5: dirbuster\n6: curl scan for users")
+    print("0: Info\n1: install packages/tools\n2: nmap\n3: metasploit\n4: wpscan\n5: dirbuster\n6: curl scan for users\n7: Pokemon api")
     
 
 def main():
@@ -55,6 +56,13 @@ def main():
         elif user_input == "6":
             adress = input("Enter Adress:")
             scan_curl_for_users(adress)
+        elif user_input == "7":
+            user_input = input("Enter pokemon name please:")
+            async def get_pokemon_wrapper():
+                response = await get_pokemon(user_input)
+            if __name__ == "__main__":
+                 asyncio.run(get_pokemon_wrapper())   
+           
         else:
             print("Please enter a valid option.")
 
