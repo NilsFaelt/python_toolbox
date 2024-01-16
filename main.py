@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Toolbox"""
+import asyncio
 from nmap.nmap import nmap
 from gobuster.gobuster import gobuster
 from update_packages.update_packages import update_packages
@@ -7,9 +9,7 @@ from metasploit.metasploit import metasploit
 from wpscan.wpscan import wpscan
 from util_functions.scan_curl_for_users import scan_curl_for_users
 from get_pokemon.get_pokemon import get_pokemon
-import asyncio 
-import json
-dogs = r'''
+DOGS = r'''
                Gemina ToolBox
 
       / \__       / \__        / \__
@@ -22,18 +22,18 @@ dogs = r'''
          Use Only for legal purposes
 '''
 
-print(dogs)
+print(DOGS)
 
 
 
 def display_menu():
+    """Function printing menu options."""
     print("Welcome!\nPlease choose an option")
     print("Choose option 1 first time you use this toolbox to install all tool/packages\n")
-    
-    print("0: Info\n1: install packages/tools\n2: nmap\n3: metasploit\n4: wpscan\n5: dirbuster\n6: curl scan for users\n7: Pokemon api")
-    
-
+    print("0: Info\n1: install packages/tools:")
+    print("2: nmap\n3: metasploit\n4: wpscan\n5: dirbuster\n6: curl scan for users\n7: Pokemon api")
 def main():
+    """Function accepting user_input for menu"""
     while True:
         display_menu()
         user_input = input("Select an option: ")
@@ -59,13 +59,11 @@ def main():
         elif user_input == "7":
             user_input = input("Enter pokemon name please:")
             async def get_pokemon_wrapper():
-                response = await get_pokemon(user_input)
+                await get_pokemon(user_input)
             if __name__ == "__main__":
-                 asyncio.run(get_pokemon_wrapper())   
-           
+                asyncio.run(get_pokemon_wrapper())
         else:
             print("Please enter a valid option.")
-
         choice = input("Do you want to continue? (y/n): ").lower()
         if choice != 'y':
             break

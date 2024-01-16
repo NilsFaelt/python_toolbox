@@ -1,8 +1,8 @@
-import asyncio
-import httpx
 import json
+import httpx
 
 async def get_pokemon(pokemon_name=None):
+    """Fetching pokemons"""
     try:
         if not pokemon_name:
             url = "https://pokeapi.co/api/v2/pokemon/ditto"
@@ -20,4 +20,3 @@ async def get_pokemon(pokemon_name=None):
     except httpx.HTTPError as e:
         print(f"Error fetching Pokemon data: {e}")
         return None
-
