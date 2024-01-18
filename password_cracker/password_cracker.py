@@ -17,7 +17,7 @@ def password_cracker():
         print("Error: Unable to decode the file content.")
 
 
-    print(rock_you)
+    print(rock_you[0])
 
 
     
