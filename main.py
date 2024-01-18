@@ -65,8 +65,8 @@ def main():
             if __name__ == "__main__":
                 asyncio.run(get_pokemon_wrapper())
         elif user_input == "8":
-            user_input = input("Enter password/hash please")
-            password_cracker()
+            user_input = input("Enter sha-256 hash please")
+            password_cracker(user_input)
         else:
             print("Please enter a valid option.")
         choice = input("Do you want to continue? (y/n): ").lower()
