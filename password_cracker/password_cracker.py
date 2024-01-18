@@ -1,6 +1,5 @@
 import hashlib
 
-# /usr/share/wordlists/rockyou.txt
 file_path = '/usr/share/wordlists/rockyou.txt'
 hashed_words_array = []
 words_array = []
@@ -26,4 +25,4 @@ def compare_hashes(encoded_password, hashed_words_array):
             return
     print("No match found")
 
-# Example usage
+
