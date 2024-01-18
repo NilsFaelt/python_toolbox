@@ -1,6 +1,6 @@
 import hashlib
 
-file_path = '/usr/share/hashed_passwords.txt'
+file_path = '/usr/share/wordlists/rockyou.txt'
 
 hashed_words_array = []
 
