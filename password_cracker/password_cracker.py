@@ -27,5 +27,3 @@ def compare_hashes(encoded_password, hashed_words_array):
     print("No match found")
 
 # Example usage
-encoded_password = input("Enter sha-256 hash: ").strip()
-password_cracker(encoded_password)
