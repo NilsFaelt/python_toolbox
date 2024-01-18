@@ -19,7 +19,6 @@ def update_packages():
         subprocess.run(["apt-get", "install", "hashcat", "-y"],check=True)
         subprocess.run(["apt-get", "install", "gobuster", "-y"],check=True)
         subprocess.run(["apt-get", "install", "dirb", "-y"],check=True)
-        subprocess.run(["apt-get", "install", "volatility", "-y"],check=True)
         subprocess.run(["apt", "install", "curl", "-y"],check=True)
         subprocess.run(["apt", "install", "wordlists"],check=True)
         subprocess.run(["gunzip", "/usr/share/wordlists/rockyou.txt.gz"],check=True)
