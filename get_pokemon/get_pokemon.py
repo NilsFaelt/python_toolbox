@@ -1,3 +1,4 @@
+"""Fetching Pokemons from api"""
 import json
 import httpx
 
