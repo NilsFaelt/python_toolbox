@@ -11,5 +11,8 @@ def scan_curl_for_users(url):
 
     # Use re.findall on the 'response' variable, not 'filtered_words'
     words = re.findall(r'\b\w+@[\w.-]+\b', response)
-    print(words)
-    return words
+    unique_words = list(set(words))
+    
+    print(unique_words)
+    return unique_words
+    
