@@ -1,1 +1,17 @@
 httpx
+nmap
+sqlmap
+metasploit-framework
+wireshark
+john
+hydra
+aircrack-ng
+maltego
+nikto
+wpscan
+burpsuite
+hashcat
+gobuster
+dirb
+curl
+wordlists
