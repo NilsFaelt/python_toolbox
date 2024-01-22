@@ -1,5 +1,5 @@
 httpx
-nmap
+# nmap
 sqlmap
 metasploit-framework
 wireshark
