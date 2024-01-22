@@ -27,6 +27,7 @@ To use this toolbox, follow these steps:
     ```bash
     apt-get update
     apt-get install -y python3
+    apt-get install git
     ```
 
 ### Cloning and Running the Python Code
