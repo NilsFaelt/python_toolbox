@@ -1,19 +1,19 @@
-# httpx
-# nmap
-# sqlmap
-# metasploit-framework
-# wireshark
-# john
-# hydra
-# aircrack-ng
-# maltego
-# nikto
-# wpscan
-# burpsuite
-# hashcat
-# gobuster
-# dirb
-# curl
-# wordlists
+httpx
+nmap==11111
+sqlmap
+metasploit-framework
+wireshark
+john
+hydra
+aircrack-ng
+maltego
+nikto
+wpscan
+burpsuite
+hashcat
+gobuster
+dirb
+curl
+wordlists
 
 
