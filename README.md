@@ -11,6 +11,7 @@ A Python project aiming to automate the usage of various penetration testing (pe
 ## Requirements 
 - Python3
 - pip
+- git
 
 ## Getting Started
 To use this toolbox, follow these steps:
