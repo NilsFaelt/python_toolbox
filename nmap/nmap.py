@@ -1,4 +1,3 @@
-
 """Nmap"""
 import subprocess
 import logging
