@@ -10,6 +10,7 @@ from wpscan.wpscan import wpscan
 from util_functions.scan_curl_for_users import scan_curl_for_users
 from get_pokemon.get_pokemon import get_pokemon
 from password_cracker.password_cracker import password_cracker
+from generate_report.generate_report import generate_report
 DOGS = r'''
                Gemina ToolBox
 
@@ -33,7 +34,7 @@ def display_menu():
     print("Choose option 1 first time you use this toolbox to install all tool/packages\n")
     print("0: Info\n1: install packages/tools:")
     print("2: nmap\n3: metasploit\n4: wpscan\n5: dirbuster\n6: curl scan for users\n7: Pokemon api")
-    print("8: password cracker")
+    print("8: password cracker\n9: Generate report")
 def main():
     """Function accepting user_input for menu"""
     while True:
@@ -67,6 +68,8 @@ def main():
         elif user_input == "8":
             user_input = input("Enter sha-256 hash please")
             password_cracker(user_input)
+        elif user_input == "9":
+            generate_report()
         else:
             print("Please enter a valid option.")
         choice = input("Do you want to continue? (y/n): ").lower()
