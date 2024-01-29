@@ -7,7 +7,7 @@ def generate_report():
     title = input("Enter title: ")
     content = input("Enter content: ")
     report_name_fixed = report_name.strip() + ".pdf".strip()   
-    c = canvas.Canvas(report_name_fixed, pagesize=letter)
+    c = canvas.Canvas(f"reports/{report_name_fixed}", pagesize=letter)
 
     c.setFont("Helvetica", 16)
     c.drawCentredString(300, 750, title)
@@ -21,6 +21,7 @@ def generate_report():
 
     c.drawText(text_object)
     c.save()
+    print(f"Report saved inside toolbox in reports directory")
 
 if __name__ == "__main__":
     generate_report()
