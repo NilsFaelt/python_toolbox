@@ -1,11 +1,14 @@
+"""Starting metasploit"""
 import subprocess
+import logging
 
 def metasploit():
+    """Starting metasploit"""
     try:
-        subprocess.run("msfconsole", shell=True)
+        subprocess.run("msfconsole", shell=True , check=True)
         print("Metasploit finished")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+    except subprocess.CalledProcessError as e:
+        logging.error("Error occurred during command execution: %s", e)
 
 if __name__ == "__main__":
     metasploit()

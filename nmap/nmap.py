@@ -11,10 +11,8 @@ def nmap(ip):
         subprocess.run(command, shell=True, check=True)
         print(f"Nmap scan completed, scan report saved to {scan_result_path} as scan_result")
     except subprocess.CalledProcessError as e:
-        logging.error("Error occurred during command execution.")
-        logging.error("Command: %s", e.cmd)
-        logging.error("Return Code: %s", e.returncode)
-        logging.error("Output: %s", e.output.decode("utf-8"))
+        logging.error("Error occurred during command execution. %s", e)
+      
 
 if __name__ == "__main__":
     target_ip = input("Enter the target IP address: ")

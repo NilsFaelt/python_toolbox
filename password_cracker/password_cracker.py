@@ -1,4 +1,6 @@
+"""function for cracking passwords"""
 import hashlib
+import logging
 
 file_path = '/usr/share/wordlists/rockyou.txt'
 hashed_words_array = []
@@ -6,6 +8,7 @@ words_array = []
 
 
 def password_cracker(encoded_password):
+    """function for cracking passwords"""
     try:
         with open(file_path, 'r', encoding='latin-1', errors='replace') as f:
             for line in f:
@@ -14,10 +17,11 @@ def password_cracker(encoded_password):
                 words_array.extend(words)
                 hashed_words_array.extend(hashed_words)
         compare_hashes(encoded_password, hashed_words_array)
-    except UnicodeDecodeError:
-        print("Error: Unable to decode the file content.")
+    except UnicodeDecodeError as e:
+           logging.error("UniDecodeError: %s", e)
 
 def compare_hashes(encoded_password, hashed_words_array):
+    """Check for matching hashes"""
     for index, hashed_password in enumerate(hashed_words_array):
         if encoded_password == hashed_password:
             print(f"Match found at index {index}")

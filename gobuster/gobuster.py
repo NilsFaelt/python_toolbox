@@ -13,7 +13,4 @@ def gobuster(ip):
         subprocess.run(command, shell=True, check=True)
         print(f"DirBuster scan completed. Results saved to scan_result_dirb.txt on {config.dir_saved_scan_result}.")
     except subprocess.CalledProcessError as e:
-        logging.error("Error occurred during command execution.")
-        logging.error("Command: %s", e.cmd)
-        logging.error("Return Code: %s", e.returncode)
-        logging.error("Output: %s", e.output.decode("utf-8"))
+        logging.error("Error occurred during command execution: %s", e)
