@@ -18,7 +18,7 @@ def password_cracker(encoded_password):
                 hashed_words_array.extend(hashed_words)
         compare_hashes(encoded_password, hashed_words_array)
     except Exception as e:
-           logging.error("UniDecodeError: %s", e)
+           print(f"UniDecodeError: {e}")
 
 def compare_hashes(encoded_password, hashed_words_array):
     """Check for matching hashes"""
