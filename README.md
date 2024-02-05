@@ -12,7 +12,7 @@ A Python project aiming to automate the usage of various penetration testing (pe
 - Python3
 - pip
 - git
-
+- chromedriver
 ## Getting Started
 To use this toolbox, follow these steps:
 
