@@ -8,10 +8,10 @@ from packages_and_info.packages_and_info import packages_and_info
 from metasploit.metasploit import metasploit
 from wpscan.wpscan import wpscan
 from util_functions.scan_curl_for_users import scan_curl_for_users
-from get_pokemon.get_pokemon import get_pokemon
 from password_cracker.password_cracker import password_cracker
 from generate_report.generate_report import generate_report
 from spy_photo.spy_photo import spy_photo
+from consume_api.consume_api import consume_api
 DOGS = r'''
                Gemina ToolBox
 
@@ -33,9 +33,9 @@ def display_menu():
     """Function printing menu options."""
     print("Welcome!\nPlease choose an option")
     print("Choose option 1 first time you use this toolbox to install all tool/packages\n")
-    print("0: Info\n1: install packages/tools:")
-    print("2: nmap\n3: metasploit\n4: wpscan\n5: dirbuster\n6: curl scan for users\n7: Pokemon api")
-    print("8: password cracker\n9: Generate report\n10 Spy photo")
+    print("0: Info\n1: Install packages/tools:")
+    print("2: Nmap\n3: Metasploit\n4: Wpscan\n5: Dirbuster\n6: Curl scan for users\n7: Consume api")
+    print("8: Password cracker\n9: Generate report\n10 Spy photo")
 def main():
     """Function accepting user_input for menu"""
     while True:
@@ -61,11 +61,10 @@ def main():
             adress = input("Enter Adress:")
             scan_curl_for_users(adress)
         elif user_input == "7":
-            user_input = input("Enter pokemon name please:")
-            async def get_pokemon_wrapper():
-                await get_pokemon(user_input)
+            async def consum_api_wrapper():
+                await consume_api()
             if __name__ == "__main__":
-                asyncio.run(get_pokemon_wrapper())
+                asyncio.run(consum_api_wrapper())
         elif user_input == "8":
             user_input = input("Enter sha-256 hash please")
             password_cracker(user_input)

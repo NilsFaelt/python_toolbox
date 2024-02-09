@@ -1,18 +1,16 @@
 import time
 from datetime import datetime
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
 def spy_photo():
     """Taking screenshots with selenium"""
     print('selenium')
     chrome_options = webdriver.ChromeOptions()
-
     driver = webdriver.Chrome(options=chrome_options)
-    
     website_url = 'https://unsplash.com'
     driver.get(website_url)
-    
     time.sleep(2)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     screenshot_name = f"./spy_shots/screenshot_{timestamp}.png"
