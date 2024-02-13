@@ -61,17 +61,18 @@ def main():
             adress = input("Enter Adress:")
             scan_curl_for_users(adress)
         elif user_input == "7":
-            async def consum_api_wrapper():
+            async def consume_api_wrapper():
                 await consume_api()
             if __name__ == "__main__":
-                asyncio.run(consum_api_wrapper())
+                asyncio.run(consume_api_wrapper())
         elif user_input == "8":
             user_input = input("Enter sha-256 hash please")
             password_cracker(user_input)
         elif user_input == "9":
             generate_report()
         elif user_input == "10":
-            spy_photo()
+            url = input('Enter url:')
+            spy_photo(url)
         else:
             print("Please enter a valid option.")
         choice = input("Do you want to continue? (y/n): ").lower()
